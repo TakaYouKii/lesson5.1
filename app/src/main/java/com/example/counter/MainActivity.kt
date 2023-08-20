@@ -36,21 +36,9 @@ class MainActivity : AppCompatActivity(), CounterView {
 
     override fun showTost() {
         Toast.makeText(this, "Congratulation", Toast.LENGTH_SHORT).show()
-
     }
 
-    override fun changeCountColor(number: Int) {
-        if(number in -14..14){
-            binding.countTv.setTextColor(ContextCompat.getColor(this, R.color.white))
-        }else if(number == -15 || number == 15){
-            binding.countTv.setTextColor(ContextCompat.getColor(this, R.color.green))
-        }else{
-            binding.countTv.setTextColor(ContextCompat.getColor(this, R.color.red))
-        }
-
-
-
+    override fun changeCountColor(color: Int) {
+        binding.countTv.setTextColor(color)
     }
-
-
 }

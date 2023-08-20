@@ -6,5 +6,5 @@ interface CounterView {
 
     fun showTost()
 
-    fun changeCountColor(i: Int)
+    fun changeCountColor(color: Int)
 }

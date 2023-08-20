@@ -1,5 +1,6 @@
 package com.example.counter
 
+import android.graphics.Color
 import com.example.counter.model.CounterModel
 import com.example.counter.view.CounterView
 
@@ -14,16 +15,25 @@ class Presenter(var counterView: CounterView) {
         if(model.number == 10){
             counterView.showTost()
         }
-        counterView.changeCountColor(model.number)
+        if(model.number == -15 || model.number == 15){
+            counterView.changeCountColor(Color.GREEN)
+        }else{
+            counterView.changeCountColor(Color.WHITE)
+        }
+
     }
 
     fun decrement(){
         model.decrement()
         counterView.showCount(model.number)
-        if(model.number == 10){
+        if(model.number == -10){
             counterView.showTost()
         }
-        counterView.changeCountColor(model.number)
+        if(model.number == -15 || model.number == 15){
+            counterView.changeCountColor(Color.GREEN)
+        }else{
+            counterView.changeCountColor(Color.WHITE)
+        }
     }
 
 
